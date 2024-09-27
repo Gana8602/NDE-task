@@ -6,12 +6,14 @@ class DetailsPage extends StatefulWidget {
   final String description;
   final String keywords;
   final String source;
+  final String date;
   const DetailsPage(
       {super.key,
       required this.img,
       required this.title,
       required this.description,
       required this.keywords,
+      required this.date,
       required this.source});
 
   @override
@@ -50,9 +52,15 @@ class _DetailsPageState extends State<DetailsPage> {
               const SizedBox(
                 height: 10,
               ),
-              const Text(
-                "Description :",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Description :",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text(widget.date)
+                ],
               ),
               const SizedBox(
                 height: 10,
