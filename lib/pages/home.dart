@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage> {
                               img: n[index].image!,
                               description: n[index].description,
                               title: n[index].title,
+                              date: formattedDateTime,
                               source: n[index].source,
                             ));
                       },
